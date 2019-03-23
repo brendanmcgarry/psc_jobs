@@ -1,8 +1,13 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017')
+
 
 app.get('/', (req, res) => {
 	// GET request for homepage
+	res.send('Hi!');
 })
 
 app.post('/jobs/create', (req, res) => {
@@ -20,9 +25,9 @@ app.put('/jobs/update', (req, res) => {
 	// authorization required of course
 })
 
-var server = app.listen(8000, () => {
-	var host = server.address().address;
-	var port = server.address().port;
+const server = app.listen(8000, () => {
+	const host = server.address().address;
+	const port = server.address().port;
 
 	console.log(`PSC Jobs site listening at http://${host}:${port}`)
 })
