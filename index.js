@@ -21,8 +21,18 @@ app.get('/', (req, res) => {
 app.post('/posting/create', (req, res) => {
     // POST to create job posting
     // TODO: auth required
-    console.log('see if this works');
-    console.log(req.body);
+    let posting = req.body.posting;
+    posting.date_posted = Date.now();
+    posting.required_skill = posting.required_skill.split(' ');
+    console.log(posting);
+    PostingSchema.create(posting, (err, posting) => {
+        if (err)
+            console.log(err);
+        else {
+            console.log('Created posting:');
+            console.log(posting);
+        }
+    });
 })
 
 app.delete('/posting/delete', (req, res) => {

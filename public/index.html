@@ -48,32 +48,32 @@
             </div>
             <div class="form-group">
                 <label for="englishJobDescription">English Job Description</label>
-                <textarea id="englishJobDescription" cols="60" rows="6"></textarea>
+                <textarea id="englishJobDescription" cols="60" rows="6" name="posting[description_en]"></textarea>
                 <label for="frenchJobDescription">Description de poste français</label>
-                <textarea id="frenchJobDescription" cols="60" rows="6"></textarea>
+                <textarea id="frenchJobDescription" cols="60" rows="6" name="posting[description_fr]"></textarea>
             </div>
             <div class="form-check">
                 <label for="salary">Salary</label>
-                <input class="form-control" id="salary" placeholder="Enter Salary">
+                <input class="form-control" id="salary" name="posting[salary]" placeholder="Enter Salary">
             </div>
             <div class="form-check">
                 <label for="workLocation">Work Location</label>
-                <input class="form-control" id="workLocation" placeholder="Enter Work Location">
+                <input class="form-control" id="workLocation" name="posting[work_location]" placeholder="Enter Work Location">
             </div>
             <div class="form-check">
                 <label for="workUniverseID">Work Universe ID</label>
-                <input class="form-control" id="workUniverseID" placeholder="Enter Work Universe ID">
+                <input class="form-control" id="workUniverseID" name="posting[work_universe]" placeholder="Enter Work Universe ID">
             </div>
             <div class="form-check">
                 <label for="requiredSkill">Required Skills</label>
-                <input class="form-control" id="requiredSkill" placeholder="Enter Required Skills">
+                <input class="form-control" id="requiredSkill" name="posting[required_skill]" placeholder="Enter Required Skills">
             </div>
             <div class="form-check">
                 <label for="educationLevel">Education Level</label>
-                <select class="form-control" id="educationLevel" placeholder="Enter Education Level">
-                    <option>Bs</option>
-                    <option>Ms</option>
-                    <option>Phd</option>
+                <select class="form-control" id="educationLevel" name="posting[education_level]" placeholder="Enter Education Level">
+                    <option value="3">Bs</option>
+                    <option value="2">Ms</option>
+                    <option value="1">Phd</option>
                 </select>
             </div>
             <input type="submit" value="Submit">
