@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 
@@ -8,9 +9,9 @@ mongoose.connect(mongodb);
 const CandidateSchema = require('./schemas/CandidateSchema');
 const PostingSchema = require('./schemas/PostingSchema');
 
-console.log(CandidateSchema);
-
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     // GET request for homepage
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 app.post('/posting/create', (req, res) => {
     // POST to create job posting
     // TODO: auth required
+    console.log('see if this works');
     console.log(req.body);
 })
 

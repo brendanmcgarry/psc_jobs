@@ -1,3 +1,5 @@
+console.log('hi');
+
 $("#postingCreate").submit((e) => {
 	e.preventDefault();
 

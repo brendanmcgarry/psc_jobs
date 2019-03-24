@@ -42,9 +42,9 @@
         <form style="width: 400px;" method="post" action="/posting/create" id="postingCreate">
             <div class="form-group">
                 <label for="englishJobTitle">English Job Title</label>
-                <input class="form-control" id="englishJobTitle" placeholder="Enter english job title">
+                <input class="form-control" id="englishJobTitle" name="posting[jobtitle_en]" placeholder="Enter english job title">
                 <label for="frenchJobTitle">Titre de poste français</label>
-                <input class="form-control" id="frenchJobTitle" placeholder="Entrer le titre de poste français">
+                <input class="form-control" id="frenchJobTitle" name="posting[jobtitle_fr]" placeholder="Entrer le titre de poste français">
             </div>
             <div class="form-group">
                 <label for="englishJobDescription">English Job Description</label>
@@ -76,7 +76,7 @@
                     <option>Phd</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Submit">
         </form>
     </body>
 </html>
