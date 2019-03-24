@@ -17,18 +17,18 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(public, 'index.html'));
 })
 
-app.post('/jobs/create', (req, res) => {
+app.post('/posting/create', (req, res) => {
     // POST to create job posting
     // TODO: auth required
-    console.log(req.post);
+    console.log(req.body);
 })
 
-app.delete('/jobs/delete', (req, res) => {
+app.delete('/posting/delete', (req, res) => {
     // DELETE request to delete job posting
     // should require some kind of authorization
 })
 
-app.put('/jobs/update', (req, res) => {
+app.put('/posting/update', (req, res) => {
     // PUT request to update job posting
     // authorization required of course
 })
