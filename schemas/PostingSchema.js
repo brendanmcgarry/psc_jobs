@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
 const PostingSchema = new Schema({
-    id:              Number,  // Unique ID
+    jobtitle_en:     String,  // English job title
+    jobtitle_fr:     String,  // French job title
     description_en:  String,  // English description
     description_fr:  String,  // French description
     salary:          Number,  // Job postings salary
